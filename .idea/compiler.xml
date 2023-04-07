@@ -7,16 +7,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="store-font-collect" />
+        <module name="store-static" />
         <module name="stroe-font-user" />
+        <module name="store-font-carousel" />
+        <module name="store-search" />
+        <module name="store-font-product" />
         <module name="store-gateway" />
         <module name="store-commons" />
+        <module name="store-font-category" />
+        <module name="store-font-cart" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="store-commons" options="-parameters" />
+      <module name="store-font-carousel" options="-parameters" />
+      <module name="store-font-cart" options="-parameters" />
+      <module name="store-font-category" options="-parameters" />
+      <module name="store-font-collect" options="-parameters" />
+      <module name="store-font-product" options="-parameters" />
       <module name="store-gateway" options="-parameters" />
+      <module name="store-search" options="-parameters" />
+      <module name="store-static" options="-parameters" />
       <module name="stroe-font-user" options="-parameters" />
     </option>
   </component>

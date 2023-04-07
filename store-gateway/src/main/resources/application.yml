@@ -3,11 +3,38 @@ spring:
   cloud:
     gateway:
       routes:
+          # 用户资源对应的服务
         - id: user-service
           uri: lb://user-service
           predicates:
             - Path=/user/**  # 访问user路径转发用户服务
+          # 商品资源对应的服务
         - id: product-service
           uri: lb://product-service #使用负载均衡,调用服务名
           predicates:
             - Path=/product/** # 访问product,转发到product服务
+          # 静态资源对应的服务
+        - id: static-service
+          uri: lb://static-service #静态资源处理以及oss上传服务
+          predicates:
+            - Path=/public/**
+          # 轮播图资源对应的服务
+        - id: carousel-service
+          uri: lb://carousel-service #静态资源处理以及oss上传服务!
+          predicates:
+            - Path=/carousel/**
+          # 类别对应的服务
+        - id: category-service  # 类别服务
+          uri: lb://category-service
+          predicates:
+            - Path=/category/** #转发到类别服务
+          # 搜索对应的服务
+        - id: search-service  # 类别服务
+          uri: lb://search-service
+          predicates:
+            - Path=/search/**
+          # 收藏对应的服务
+        - id: collect-service  # 收藏服务
+          uri: lb://collect-service
+          predicates:
+            - Path=/collect/**
