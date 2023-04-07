@@ -18,6 +18,7 @@
         <module>store-search</module>
         <module>store-font-collect</module>
         <module>store-font-cart</module>
+        <module>store-font-order</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -226,4 +226,19 @@ public class ProductServiceImpl implements ProductService {
         return ok;
     }
 
+    /**
+     * 根据商品id 查询id集合
+     *
+     * @param productIds
+     * @return
+     */
+    @Override
+    public List<Product> cartList(List<Integer> productIds) {
+        QueryWrapper<Product> queryWrapper = new QueryWrapper<>();
+        queryWrapper.in("product_id", productIds);
+        List<Product> productList = productMapper.selectList(queryWrapper);
+        log.info("ProductServiceImpl.cartList业务结束，结果:{}",productList);
+        return productList;
+    }
+
 }

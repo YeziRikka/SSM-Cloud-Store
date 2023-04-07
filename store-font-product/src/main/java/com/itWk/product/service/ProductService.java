@@ -74,4 +74,11 @@ public interface ProductService {
      * @return
      */
     Result ids(List<Integer> productIds);
+
+    /**
+     * 根据商品id 查询id集合
+     * @param productIds
+     * @return
+     */
+    List<Product> cartList(List<Integer> productIds);
 }

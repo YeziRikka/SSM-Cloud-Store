@@ -3,6 +3,7 @@ package com.itWk.Clients;
 import com.itWk.POJO.Product;
 import com.itWk.Utils.Result;
 import com.itWk.param.ProductCollectRequest;
+import com.itWk.param.ProductIdRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,4 +31,18 @@ public interface ProductClient {
      */
     @PostMapping("/product/collect/list")
     Result productIds(@RequestBody ProductCollectRequest productCollectRequest);
+
+    /**
+     * 购物车
+     * @param productIdRequest
+     * @return
+     */
+    @PostMapping("/product/cart/detail")
+    Product productDetail(@RequestBody ProductIdRequest productIdRequest);
+
+    /**
+     *
+     */
+    @PostMapping("product/cart/list")
+    List<Product> cartList(@RequestBody ProductCollectRequest productCollectRequest);
 }

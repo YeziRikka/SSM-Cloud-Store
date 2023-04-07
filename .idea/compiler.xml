@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="store-font-order" />
         <module name="store-font-collect" />
         <module name="store-static" />
         <module name="stroe-font-user" />
@@ -27,6 +28,7 @@
       <module name="store-font-cart" options="-parameters" />
       <module name="store-font-category" options="-parameters" />
       <module name="store-font-collect" options="-parameters" />
+      <module name="store-font-order" options="-parameters" />
       <module name="store-font-product" options="-parameters" />
       <module name="store-gateway" options="-parameters" />
       <module name="store-search" options="-parameters" />
