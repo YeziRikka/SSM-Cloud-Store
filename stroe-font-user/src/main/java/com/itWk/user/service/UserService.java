@@ -2,6 +2,7 @@ package com.itWk.user.service;
 
 import com.itWk.POJO.User;
 import com.itWk.Utils.Result;
+import com.itWk.param.PageRequest;
 import com.itWk.param.UserCheckRequest;
 import com.itWk.param.UserLoginRequest;
 
@@ -28,4 +29,33 @@ public interface UserService {
      */
     Result login(UserLoginRequest userLoginRequest);
 
+    /**
+     * 后台管理服务
+     * 查询所有用户数据
+     * @param pageRequest
+     * @return
+     */
+    Result listPage(PageRequest pageRequest);
+
+    /**
+     * 根据用户id删除用户数据
+     *
+     * @param userId
+     * @return
+     */
+    Result remove(Integer userId);
+
+    /**
+     * 用户修改功能
+     * @param user
+     * @return
+     */
+    Result update(User user);
+
+    /**
+     * 用户新增
+     * @param user
+     * @return
+     */
+    Result save(User user);
 }

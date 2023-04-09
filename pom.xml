@@ -19,6 +19,7 @@
         <module>store-font-collect</module>
         <module>store-font-cart</module>
         <module>store-font-order</module>
+        <module>store-admin</module>
     </modules>
     <packaging>pom</packaging>
 

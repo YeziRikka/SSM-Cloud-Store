@@ -1,15 +1,17 @@
 package com.itWk.product.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.itWk.POJO.Product;
 import com.itWk.Utils.Result;
 import com.itWk.param.ProductHotRequest;
 import com.itWk.param.ProductIdRequest;
 import com.itWk.param.ProductIdsRequest;
 import com.itWk.param.ProductSearchRequest;
+import com.itWk.to.OrderToProduct;
 
 import java.util.List;
 
-public interface ProductService {
+public interface ProductService extends IService<Product>{
 
     /**
      * 根据单类别名称，查询热门商品
@@ -29,7 +31,7 @@ public interface ProductService {
      * 查询全部类别商品
      * @return
      */
-    Result list();
+    Result lists();
 
     /**
      * 通用业务
@@ -81,4 +83,11 @@ public interface ProductService {
      * @return
      */
     List<Product> cartList(List<Integer> productIds);
+
+    /**
+     * 修改库存
+     * 增加销售量
+     * @param orderToProductList
+     */
+    void subNumber(List<OrderToProduct> orderToProductList);
 }

@@ -4,50 +4,166 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="456fb352-753b-4650-bf70-ca7d1986fda9" name="Changes" comment="4.7">
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/POJO/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/POJO/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/param/CartListRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/param/CartRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/param/CartSaveRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/param/OrderRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/to/OrderToProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/vo/CartVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/CartApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/mapper/CartMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/service/impl/CartServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/OrderApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/config/OrderConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/mapper/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/controller/ProductCartController.java" afterDir="false" />
+    <list default="true" id="456fb352-753b-4650-bf70-ca7d1986fda9" name="Changes" comment="4.9前端功能开发完毕">
+      <change afterPath="$PROJECT_DIR$/store-admin/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/AdminApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/config/AdminConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/config/SpringMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/controller/AdminUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/controller/CaptChaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/controller/HtmlJumpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/inteceptors/LoginProtectInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/mapper/AdminUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/param/AdminUserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/pojo/AdminUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/service/AdminUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/service/impl/AdminUserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/itWk/admin/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/api/clear.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/api/init.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/api/menus.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/api/table.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/api/tableSelect.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/api/upload.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/css/comon0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/css/layuimini.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/css/public.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/css/themes/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/bg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/captcha.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/donate_qrcode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/head.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/head_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/icon-login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/jt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/lbx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/loginbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/images/weather.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/area_echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/china.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/jquery.countup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/jquery.waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/echarts/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/echarts/echartsTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/iconPicker/iconPickerFa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/layarea/layarea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/layuimini/miniAdmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/layuimini/miniMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/layuimini/miniTab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/layuimini/miniTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/layuimini/miniTongji.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/step-lay/step.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/step-lay/step.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/tableSelect/tableSelect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/treetable-lay/treetable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/treetable-lay/treetable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/wangEditor/fonts/w-e-icon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/wangEditor/wangEditor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/wangEditor/wangEditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/wangEditor/wangEditor.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/wangEditor/wangEditor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/js/lay-module/wangEditor/wangEditor.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/jq-module/jquery.particleground.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/jq-module/paigusu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/jq-module/zyupload/zyupload-1.0.0.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/jq-module/zyupload/zyupload-1.0.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/jquery-3.4.1/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/layer/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/layer/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/font/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/static/lib/layui-v2.6.3/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/category/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/category/category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/category/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/order/order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/product/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/product/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/product/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/user/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/user/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/user/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-admin/src/main/resources/templates/welcome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/Clients/UserClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stroe-font-user/src/main/java/com/itWk/user/config/UserConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stroe-font-user/src/main/java/com/itWk/user/controller/UserAminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/Clients/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/Clients/ProductClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/constants/UserContants.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/constants/UserContants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-commons/target/Store-commons-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/target/Store-commons-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-commons/target/classes/com/itWk/Clients/ProductClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/target/classes/com/itWk/Clients/ProductClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-commons/target/classes/com/itWk/constants/UserContants.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/target/classes/com/itWk/constants/UserContants.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-font-carousel/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-carousel/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-font-cart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-cart/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-font-category/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-category/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-font-product/target/classes/com/itWk/product/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/target/classes/com/itWk/product/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-font-product/target/classes/com/itWk/product/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/target/classes/com/itWk/product/service/impl/ProductServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-gateway/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stroe-font-user/src/main/java/com/itWk/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/stroe-font-user/src/main/java/com/itWk/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stroe-font-user/src/main/java/com/itWk/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/stroe-font-user/src/main/java/com/itWk/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stroe-font-user/target/classes/com/itWk/user/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/stroe-font-user/target/classes/com/itWk/user/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +173,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -102,7 +218,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/store-static/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/store-admin/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.291954" />
@@ -111,13 +227,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.itWk.admin.service" />
       <recent name="com.itWk.order.service" />
       <recent name="com.itWk.collect.service" />
       <recent name="com.itWk.search.service" />
       <recent name="com.itWk.product.service" />
-      <recent name="com.itWk.category.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\BISHE\SSM-Cloud-Store\store-admin\src\main\resources" />
       <recent name="D:\BISHE\SSM-Cloud-Store\store-static\src\main\resources" />
       <recent name="D:\BISHE\SSM-Cloud-Store\Store-commons\src\main\java\com\itWk\Utils" />
     </key>
@@ -130,47 +247,21 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SearchApplication">
-    <configuration name="CartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="store_test_run" temporary="true" nameIsGenerated="true">
-      <module name="store-font-cart" />
+  <component name="RunManager" selected="Spring Boot.AdminApplication">
+    <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="store-admin" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itWk.cart.*" />
+          <option name="PATTERN" value="com.itWk.admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itWk.cart.CartApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itWk.admin.AdminApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="store_test_run" temporary="true" nameIsGenerated="true">
-      <module name="store-font-category" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itWk.category.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itWk.category.CategoryApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CollectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="store_test_run" temporary="true" nameIsGenerated="true">
-      <module name="store-font-collect" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itWk.collect.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itWk.collect.CollectApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="store_test_run" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="2" temporary="true" nameIsGenerated="true">
       <module name="store-font-product" />
       <extension name="coverage">
         <pattern>
@@ -183,7 +274,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="store_test_run" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="3" temporary="true" nameIsGenerated="true">
       <module name="store-search" />
       <extension name="coverage">
         <pattern>
@@ -196,13 +287,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StaticsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="2" temporary="true" nameIsGenerated="true">
+      <module name="store-static" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itWk.statics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itWk.statics.StaticsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="2" temporary="true" nameIsGenerated="true">
+      <module name="stroe-font-user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itWk.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itWk.user.UserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.CartApplication" />
+        <item itemvalue="Spring Boot.AdminApplication" />
+        <item itemvalue="Spring Boot.UserApplication" />
+        <item itemvalue="Spring Boot.StaticsApplication" />
         <item itemvalue="Spring Boot.ProductApplication" />
         <item itemvalue="Spring Boot.SearchApplication" />
-        <item itemvalue="Spring Boot.CollectApplication" />
-        <item itemvalue="Spring Boot.CategoryApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +338,10 @@
       <workItem from="1680668185136" duration="18408000" />
       <workItem from="1680755594993" duration="14886000" />
       <workItem from="1680843361008" duration="5657000" />
-      <workItem from="1680849173404" duration="11155000" />
+      <workItem from="1680849173404" duration="12914000" />
+      <workItem from="1680919412144" duration="8502000" />
+      <workItem from="1681008799885" duration="407000" />
+      <workItem from="1681009430487" duration="15604000" />
     </task>
     <task id="LOCAL-00001" summary="3.31">
       <created>1680247100709</created>
@@ -237,7 +357,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680844094645</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="4.7新完成购物车模块，订单模块（未完成）">
+      <created>1680867218430</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680867218430</updated>
+    </task>
+    <task id="LOCAL-00004" summary="4.9前端功能开发完毕">
+      <created>1681009959479</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681009959479</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +392,23 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="3.31" />
     <MESSAGE value="4.7" />
-    <option name="LAST_COMMIT_MESSAGE" value="4.7" />
+    <MESSAGE value="4.7新完成购物车模块，订单模块（未完成）" />
+    <MESSAGE value="4.9前端功能开发完毕" />
+    <option name="LAST_COMMIT_MESSAGE" value="4.9前端功能开发完毕" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/service/ProductService.java</url>
+          <line>84</line>
+          <properties class="com.itWk.product.service.ProductService" method="cartList">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

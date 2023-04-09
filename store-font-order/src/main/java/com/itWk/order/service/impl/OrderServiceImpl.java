@@ -1,23 +1,41 @@
 package com.itWk.order.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.itWk.Clients.ProductClient;
 import com.itWk.POJO.Order;
+import com.itWk.POJO.Product;
 import com.itWk.Utils.Result;
 import com.itWk.order.mapper.OrderMapper;
 import com.itWk.order.service.OrderService;
 import com.itWk.param.OrderRequest;
+import com.itWk.param.ProductCollectRequest;
 import com.itWk.to.OrderToProduct;
 import com.itWk.vo.CartVo;
+import com.itWk.vo.OrderVo;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * mybatis继承ServiceImpl接口，提供多种批量操作的方法，而mapper没有封装这些方法
  */
 
+@Service
+@Slf4j
 public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements OrderService {
+
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+    @Autowired
+    private ProductClient productClient;
 
     /**
      * 订单生成方法
@@ -62,7 +80,59 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
          * 父类提供的批量增加操作
          */
         saveBatch(orderList);
+        //发送购物车消息
+        rabbitTemplate.convertAndSend("topic.ex","clear.cart",cartIds);
+        //发送商品服务消息
+        rabbitTemplate.convertAndSend("topic.ex","sub.number",orderToProducts);
+        return Result.ok( "订单保存成功");
+    }
 
-        return null;
+    /**
+     * 分组查询订单数据
+     *
+     * @param userId
+     * @return
+     */
+    @Override
+    public Result lists(Integer userId) {
+        //查询用户对应的全部订单
+        QueryWrapper<Order> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_id", userId);
+        List<Order> list = list(queryWrapper);
+        //利用steam流进行订单分组
+        Map<Long, List<Order>> listMap = list.stream().collect(Collectors.groupingBy(Order::getOrderId));
+        //查询订单的全部商品集合，并转为map
+        List<Integer> productIds = list.stream().map(Order::getProductId).collect(Collectors.toList());
+        ProductCollectRequest productCollectRequest = new ProductCollectRequest();
+        productCollectRequest.setProductIds(productIds);
+        List<Product> productList = productClient.cartList(productCollectRequest);//获得商品集合
+        //转为map
+        Map<Integer, Product> productMap = productList.stream().collect(Collectors.toMap(Product::getProductId, v -> v));
+        //封装返回的VO对象
+        //结果封装
+        List<List<OrderVo>> result = new ArrayList<>();
+
+        for (List<Order> orders : listMap.values()) {
+            List<OrderVo> orderVos = new ArrayList<>();
+            for (Order order : orders) {
+                //返回vo数据封装
+                OrderVo orderVo = new OrderVo();
+                Product product = productMap.get(order.getProductId());
+                orderVo.setProductName(product.getProductName());
+                orderVo.setProductPicture(product.getProductPicture());
+                orderVo.setId(order.getId());
+                orderVo.setOrderId(order.getOrderId());
+                orderVo.setOrderTime(order.getOrderTime());
+                orderVo.setProductNum(order.getProductNum());
+                orderVo.setProductId(order.getProductId());
+                orderVo.setProductPrice(order.getProductPrice());
+                orderVo.setUserId(order.getUserId());
+                orderVos.add(orderVo);
+            }
+            result.add(orderVos);
+        }
+        Result resultOk = Result.ok("订单数据获取成功", result);
+        log.info("OrderServiceImpl.lists业务结束",resultOk);
+        return resultOk;
     }
 }

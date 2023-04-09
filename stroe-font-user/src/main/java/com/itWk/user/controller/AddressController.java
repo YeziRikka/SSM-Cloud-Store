@@ -4,6 +4,7 @@ import com.itWk.POJO.Address;
 import com.itWk.Utils.Result;
 import com.itWk.param.AddressListRequest;
 import com.itWk.param.AddressRemoveRequest;
+import com.itWk.param.AddressRequest;
 import com.itWk.user.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
@@ -27,14 +28,16 @@ public class AddressController {
     }
 
     @PostMapping("/save")
-    public Result save(@RequestBody @Validated Address address,BindingResult bindingResult){
+    public Result save(@RequestBody @Validated AddressRequest addressRequest, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
             Result.fail("参数异常，保存失败");
         }
+        Address address = addressRequest.getAdd();
+        address.setUserId(addressRequest.getUserId());
         return addressService.save(address);
     }
 
-    @DeleteMapping("/remove")
+    @PostMapping("/remove")
     public Result remove(@RequestBody @Validated AddressRemoveRequest addressRemoveRequest,BindingResult bindingResult){
         if (bindingResult.hasErrors()){
             Result.fail("参数异常，删除失败");

@@ -25,10 +25,12 @@ com\itWk\constants\UserContants.class
 com\itWk\param\PageRequest.class
 com\itWk\Clients\ProductClient.class
 com\itWk\param\ProductIdRequest.class
+com\itWk\param\AddressRequest.class
 com\itWk\param\AddressRemoveRequest.class
 com\itWk\param\CartListRequest.class
 com\itWk\POJO\Picture.class
 com\itWk\config\CaCheConfig.class
 com\itWk\param\OrderRequest.class
 com\itWk\Utils\MD5Util.class
+com\itWk\vo\OrderVo.class
 com\itWk\param\ProductPromoRequest.class

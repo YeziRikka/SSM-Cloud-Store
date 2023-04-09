@@ -13,6 +13,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class OrderConfig {
 
+    /**
+     * 序列化方式
+     * @return
+     */
     @Bean
     public MessageConverter messageConverter(){
 
