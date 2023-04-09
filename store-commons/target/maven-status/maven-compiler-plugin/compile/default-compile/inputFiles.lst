@@ -1,5 +1,6 @@
 D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\Utils\MD5Util.java
 D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\param\AddressRemoveRequest.java
+D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\to\OrderToProduct.java
 D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\Clients\ProductClient.java
 D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\vo\CartVo.java
 D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\POJO\Carousel.java
@@ -7,7 +8,9 @@ D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\param\CartListRequ
 D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\Clients\CategoryClient.java
 D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\config\CaCheConfig.java
 D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\Clients\SearchClient.java
+D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\param\OrderRequest.java
 D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\param\ProductCollectRequest.java
+D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\POJO\Order.java
 D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\POJO\User.java
 D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\param\PageRequest.java
 D:\BISHE\SSM-Cloud-Store\store-commons\src\main\java\com\itWk\param\ProductPromoRequest.java

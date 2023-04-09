@@ -10,4 +10,11 @@ public interface OrderService {
      * @return
      */
     Result save(OrderRequest orderRequest);
+
+    /**
+     * 分组查询订单数据
+     * @param userId
+     * @return
+     */
+    Result lists(Integer userId);
 }

@@ -4,50 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="456fb352-753b-4650-bf70-ca7d1986fda9" name="Changes" comment="4.7">
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/POJO/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/POJO/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/param/CartListRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/param/CartRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/param/CartSaveRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/param/OrderRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/to/OrderToProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/vo/CartVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/CartApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/mapper/CartMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/service/impl/CartServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/OrderApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/config/OrderConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/mapper/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-order/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/controller/ProductCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="456fb352-753b-4650-bf70-ca7d1986fda9" name="Changes" comment="4.7新完成购物车模块，订单模块（未完成）">
+      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/param/AddressRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/vo/OrderVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/config/CartConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/listener/CartRabbitMqListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/listener/ProductRabbitMqListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/Clients/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/Clients/ProductClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/POJO/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/src/main/java/com/itWk/POJO/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-commons/target/Store-commons-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/target/Store-commons-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-commons/target/classes/com/itWk/Clients/ProductClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/target/classes/com/itWk/Clients/ProductClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-commons/target/classes/com/itWk/POJO/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/target/classes/com/itWk/POJO/Address.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-font-carousel/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-carousel/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-font-cart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-cart/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-font-category/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-category/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-cart/src/main/java/com/itWk/cart/service/impl/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-cart/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-cart/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/OrderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/config/OrderConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/config/OrderConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-order/src/main/java/com/itWk/order/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/config/ProductConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/config/ProductConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/mapper/ProductPictureMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/mapper/ProductPictureMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-product/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-product/target/classes/com/itWk/product/config/ProductConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/target/classes/com/itWk/product/config/ProductConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-font-product/target/classes/com/itWk/product/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/target/classes/com/itWk/product/controller/ProductController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-font-product/target/classes/com/itWk/product/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/target/classes/com/itWk/product/service/ProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-font-product/target/classes/com/itWk/product/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-font-product/target/classes/com/itWk/product/service/impl/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-gateway/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stroe-font-user/src/main/java/com/itWk/user/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/stroe-font-user/src/main/java/com/itWk/user/controller/AddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stroe-font-user/target/classes/com/itWk/user/controller/AddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/stroe-font-user/target/classes/com/itWk/user/controller/AddressController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +48,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -131,46 +122,20 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.SearchApplication">
-    <configuration name="CartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="store_test_run" temporary="true" nameIsGenerated="true">
-      <module name="store-font-cart" />
+    <configuration name="OrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="store-font-order" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itWk.cart.*" />
+          <option name="PATTERN" value="com.itWk.order.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itWk.cart.CartApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itWk.order.OrderApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="store_test_run" temporary="true" nameIsGenerated="true">
-      <module name="store-font-category" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itWk.category.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itWk.category.CategoryApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CollectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="store_test_run" temporary="true" nameIsGenerated="true">
-      <module name="store-font-collect" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itWk.collect.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itWk.collect.CollectApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="store_test_run" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="store-font-product" />
       <extension name="coverage">
         <pattern>
@@ -183,7 +148,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="store_test_run" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="store-search" />
       <extension name="coverage">
         <pattern>
@@ -196,13 +161,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StaticsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="store-static" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itWk.statics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itWk.statics.StaticsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="stroe-font-user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itWk.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itWk.user.UserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.CartApplication" />
-        <item itemvalue="Spring Boot.ProductApplication" />
         <item itemvalue="Spring Boot.SearchApplication" />
-        <item itemvalue="Spring Boot.CollectApplication" />
-        <item itemvalue="Spring Boot.CategoryApplication" />
+        <item itemvalue="Spring Boot.UserApplication" />
+        <item itemvalue="Spring Boot.StaticsApplication" />
+        <item itemvalue="Spring Boot.ProductApplication" />
+        <item itemvalue="Spring Boot.OrderApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +212,10 @@
       <workItem from="1680668185136" duration="18408000" />
       <workItem from="1680755594993" duration="14886000" />
       <workItem from="1680843361008" duration="5657000" />
-      <workItem from="1680849173404" duration="11155000" />
+      <workItem from="1680849173404" duration="12914000" />
+      <workItem from="1680919412144" duration="8502000" />
+      <workItem from="1681008799885" duration="407000" />
+      <workItem from="1681009430487" duration="296000" />
     </task>
     <task id="LOCAL-00001" summary="3.31">
       <created>1680247100709</created>
@@ -237,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680844094645</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="4.7新完成购物车模块，订单模块（未完成）">
+      <created>1680867218430</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680867218430</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +259,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="3.31" />
     <MESSAGE value="4.7" />
-    <option name="LAST_COMMIT_MESSAGE" value="4.7" />
+    <MESSAGE value="4.7新完成购物车模块，订单模块（未完成）" />
+    <option name="LAST_COMMIT_MESSAGE" value="4.7新完成购物车模块，订单模块（未完成）" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/store-font-product/src/main/java/com/itWk/product/service/ProductService.java</url>
+          <line>84</line>
+          <properties class="com.itWk.product.service.ProductService" method="cartList">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

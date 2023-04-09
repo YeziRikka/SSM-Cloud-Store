@@ -165,4 +165,16 @@ public class CartServiceImpl implements CartService {
         log.info("CartServiceImpl.remove业务结束",rows);
         return Result.ok("购物车删除成功");
     }
+
+    /**
+     * 清空购物车
+     *
+     * @param cardIds
+     */
+    @Override
+    public void clearIds(List<Integer> cardIds) {
+//      批量删除
+        cartMapper.deleteBatchIds(cardIds);
+        log.info("CartServiceImpl.clearIds业务结束",cardIds);
+    }
 }

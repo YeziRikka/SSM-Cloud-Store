@@ -3,6 +3,7 @@ package com.itWk.product.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.itWk.Clients.CategoryClient;
 import com.itWk.Clients.SearchClient;
 import com.itWk.POJO.Category;
@@ -16,6 +17,7 @@ import com.itWk.param.ProductSearchRequest;
 import com.itWk.product.mapper.ProductMapper;
 import com.itWk.product.mapper.ProductPictureMapper;
 import com.itWk.product.service.ProductService;
+import com.itWk.to.OrderToProduct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -23,13 +25,16 @@ import org.springframework.stereotype.Service;
 
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * 类别实现类
  */
 @Service
 @Slf4j
-public class ProductServiceImpl implements ProductService {
+public class ProductServiceImpl extends ServiceImpl<ProductMapper,Product> implements ProductService {
 
     /**
      * 通过这个调用对应的category服务
@@ -122,7 +127,7 @@ public class ProductServiceImpl implements ProductService {
      * @return
      */
     @Override
-    public Result list() {
+    public Result lists() {
         Result list = categoryClient.list();
         log.info("ProductServiceImpl.list业务结束，结果:{}",list);
         return list;
@@ -239,6 +244,35 @@ public class ProductServiceImpl implements ProductService {
         List<Product> productList = productMapper.selectList(queryWrapper);
         log.info("ProductServiceImpl.cartList业务结束，结果:{}",productList);
         return productList;
+    }
+
+    /**
+     * 修改库存
+     * 增加销售量
+     *
+     * @param orderToProductList
+     */
+    @Override
+    public void subNumber(List<OrderToProduct> orderToProductList) {
+        //转为MAP
+        Map<Integer, OrderToProduct> orderToProductMap = orderToProductList.stream()
+                .collect(Collectors.toMap(OrderToProduct::getProductId, v -> v));
+        //获取商品id的集合
+        Set<Integer> productIds = orderToProductMap.keySet();
+        //查询商品id集合对应的商品信息，得到商品集合
+        //使用批量查询
+        List<Product> productList = productMapper.selectBatchIds(productIds);
+        //修改商品信息 遍历
+        for (Product product : productList){
+            Integer num = orderToProductMap.get(product.getProductId()).getNum();
+            //库存减少
+            product.setProductNum(product.getProductNum() - num);
+            //销售量增加
+            product.setProductSales(product.getProductSales() + num);
+        }
+        //批量更新
+        this.updateBatchById(productList);
+        log.info("ProductServiceImpl.cartList业务结束，结果:库存和销售量修改完毕");
     }
 
 }

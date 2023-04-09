@@ -41,7 +41,7 @@ public class ProductController {
 
     @PostMapping("/category/list")
     public Result list(){
-        return productService.list();
+        return productService.lists();
     }
 
     @PostMapping("/bycategory")

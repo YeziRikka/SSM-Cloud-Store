@@ -6,6 +6,8 @@ import com.itWk.param.CartRequest;
 import com.itWk.param.CartSaveRequest;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 public interface CartService {
     /**
      * 购物车添加功能
@@ -36,6 +38,9 @@ public interface CartService {
      */
     Result remove(Cart cart);
 
-
-
+    /**
+     * 清空购物车
+     * @param cardIds
+     */
+    void clearIds(List<Integer> cardIds);
 }
