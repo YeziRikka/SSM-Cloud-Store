@@ -4,14 +4,18 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.itWk.POJO.Product;
 import com.itWk.Utils.Result;
+import com.itWk.doc.ProductDoc;
 import com.itWk.param.ProductSearchRequest;
 import com.itWk.search.service.SearchService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.lucene.search.TotalHits;
+import org.elasticsearch.action.delete.DeleteRequest;
+import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
@@ -71,9 +75,9 @@ public class SearchServiceImpl implements SearchService {
         List<Product> productList = new ArrayList<>();
         //json处理器
         ObjectMapper objectMapper = new ObjectMapper();
-        for (SearchHit hitHit : hitsHits){
+        for (SearchHit hitsHit : hitsHits){
             //查询的内容数据,ProductDoc模型对应的json数据
-            String sourceAsString = hitHit.getSourceAsString();
+            String sourceAsString = hitsHit.getSourceAsString();
             //转为product对象
             Product product = null;
             try {
@@ -86,8 +90,39 @@ public class SearchServiceImpl implements SearchService {
             productList.add(product);
         }
         //封装结果
-        Result ok = Result.ok(null, productList, total);
-        log.info("ProductServiceImpl.search业务结束，结果:{}",ok);
-        return ok;
+        Result result = Result.ok(null, productList, total);
+        log.info("ProductServiceImpl.search业务结束，结果:{}",result);
+        return result;
+    }
+
+    /**
+     * 同步调用，进行商品插入，覆盖更新
+     * 商品同步，插入和更新
+     *
+     * @param product
+     * @return
+     */
+    @Override
+    public Result save(Product product) throws IOException {
+        IndexRequest indexRequest = new IndexRequest("product").id(product.getProductId().toString());
+        ProductDoc productDoc = new ProductDoc(product);
+        ObjectMapper objectMapper = new ObjectMapper();
+        String json = objectMapper.writeValueAsString(productDoc);
+        indexRequest.source(json, XContentType.JSON);
+        restHighLevelClient.index(indexRequest, RequestOptions.DEFAULT);
+        return Result.ok("数据同步成功");
+    }
+
+    /**
+     * 进行ES库的商品删除
+     *
+     * @param productId
+     * @return
+     */
+    @Override
+    public Result remove(Integer productId) throws IOException {
+        DeleteRequest request = new DeleteRequest("product").id(productId.toString());
+        restHighLevelClient.delete(request, RequestOptions.DEFAULT);
+        return Result.ok("ES库商品信息删除成功");
     }
 }

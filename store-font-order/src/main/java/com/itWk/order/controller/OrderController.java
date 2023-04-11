@@ -4,6 +4,7 @@ import com.itWk.Utils.Result;
 import com.itWk.order.service.OrderService;
 import com.itWk.param.CartListRequest;
 import com.itWk.param.OrderRequest;
+import com.itWk.param.PageRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -34,5 +35,15 @@ public class OrderController {
             return Result.fail("参数异常,查询失败");
         }
         return orderService.lists(cartListRequest.getUserId());
+    }
+
+    @PostMapping("/remove/check")
+    public Result save(@RequestBody Integer productId){
+        return orderService.check(productId);
+    }
+
+    @PostMapping("/admin/list")
+    public Result adminList(@RequestBody PageRequest pageRequest){
+        return orderService.adminList(pageRequest);
     }
 }

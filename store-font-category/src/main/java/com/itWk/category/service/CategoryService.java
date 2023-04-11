@@ -1,7 +1,9 @@
 package com.itWk.category.service;
 
 
+import com.itWk.POJO.Category;
 import com.itWk.Utils.Result;
+import com.itWk.param.PageRequest;
 import com.itWk.param.ProductHotRequest;
 
 public interface CategoryService {
@@ -24,4 +26,32 @@ public interface CategoryService {
      * @return
      */
     Result list();
+
+    /**
+     * 后台管理分页查询
+     * @param pageRequest
+     * @return
+     */
+    Result listPage(PageRequest pageRequest);
+
+    /**
+     * 添加类别信息
+     * @param category
+     * @return
+     */
+    Result adminSave(Category category);
+
+    /**
+     * 删除数据
+     * @param categoryId
+     * @return
+     */
+    Result adminRemove(Integer categoryId);
+
+    /**
+     * 类别修改
+     * @param category
+     * @return
+     */
+    Result adminUpdate(Category category);
 }

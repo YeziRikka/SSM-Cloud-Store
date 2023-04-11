@@ -9,8 +9,10 @@ import com.itWk.Utils.Result;
 import com.itWk.order.mapper.OrderMapper;
 import com.itWk.order.service.OrderService;
 import com.itWk.param.OrderRequest;
+import com.itWk.param.PageRequest;
 import com.itWk.param.ProductCollectRequest;
 import com.itWk.to.OrderToProduct;
+import com.itWk.vo.AdminOrderVo;
 import com.itWk.vo.CartVo;
 import com.itWk.vo.OrderVo;
 import lombok.extern.slf4j.Slf4j;
@@ -36,6 +38,8 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     private RabbitTemplate rabbitTemplate;
     @Autowired
     private ProductClient productClient;
+    @Autowired
+    private OrderMapper orderMapper;
 
     /**
      * 订单生成方法
@@ -134,5 +138,37 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         Result resultOk = Result.ok("订单数据获取成功", result);
         log.info("OrderServiceImpl.lists业务结束",resultOk);
         return resultOk;
+    }
+
+    /**
+     * 检查订单中是否有商品引用
+     *
+     * @param productId
+     * @return
+     */
+    @Override
+    public Result check(Integer productId) {
+        QueryWrapper<Order> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("product_id", productId);
+        Long count = baseMapper.selectCount(queryWrapper);
+        if (count > 0){
+            return Result.fail("订单中有：" + count + "项数据引用，无法删除");
+        }
+        return Result.ok("订单中无引用，可以删除");
+    }
+
+    /**
+     * 后台管理查询全部订单数据方法
+     *
+     * @param pageRequest
+     * @return
+     */
+    @Override
+    public Result adminList(PageRequest pageRequest) {
+        //计算分页参数
+        int offset = (pageRequest.getCurrentPage() - 1 ) * pageRequest.getPageSize();
+        int pageSize = pageRequest.getPageSize();
+        List<AdminOrderVo> adminOrderVoList = orderMapper.selectAdminOrder(offset,pageSize);
+        return Result.ok("订单数据查询成功",adminOrderVoList);
     }
 }

@@ -4,6 +4,7 @@ import com.itWk.POJO.Product;
 import com.itWk.Utils.Result;
 import com.itWk.param.ProductCollectRequest;
 import com.itWk.param.ProductIdRequest;
+import com.itWk.param.ProductSaveRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -45,4 +46,16 @@ public interface ProductClient {
      */
     @PostMapping("product/cart/list")
     List<Product> cartList(@RequestBody ProductCollectRequest productCollectRequest);
+
+    @PostMapping("/product/admin/count")
+    Long adminCount(@RequestBody Integer categoryId);
+
+    @PostMapping("/product/admin/save")
+    Result adminSave(@RequestBody ProductSaveRequest productSaveRequest);
+
+    @PostMapping("/product/admin/update")
+    Result adminUpdate(@RequestBody Product product);
+
+    @PostMapping("/product/admin/remove")
+    Result adminRemove(@RequestBody Integer productId);
 }

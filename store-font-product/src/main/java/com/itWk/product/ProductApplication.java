@@ -3,8 +3,7 @@ package com.itWk.product;
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
-import com.itWk.Clients.CategoryClient;
-import com.itWk.Clients.SearchClient;
+import com.itWk.Clients.*;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,7 +18,8 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 @MapperScan("com.itWk.product.mapper")
 //开启feign服务
-@EnableFeignClients(clients = {CategoryClient.class, SearchClient.class})
+@EnableFeignClients(clients = {CategoryClient.class, SearchClient.class
+                    , OrderClient.class, CartClient.class, CollectClient.class})
 @EnableCaching //该缓存的作用是使缓存生效
 public class ProductApplication {
 

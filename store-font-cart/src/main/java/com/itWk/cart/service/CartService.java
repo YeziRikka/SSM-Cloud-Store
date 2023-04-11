@@ -43,4 +43,11 @@ public interface CartService {
      * @param cardIds
      */
     void clearIds(List<Integer> cardIds);
+
+    /**
+     * 查询购物车项
+     * @param productId
+     * @return
+     */
+    Result check(Integer productId);
 }

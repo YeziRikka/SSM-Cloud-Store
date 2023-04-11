@@ -2,6 +2,7 @@ package com.itWk.order.service;
 
 import com.itWk.Utils.Result;
 import com.itWk.param.OrderRequest;
+import com.itWk.param.PageRequest;
 
 public interface OrderService {
     /**
@@ -17,4 +18,18 @@ public interface OrderService {
      * @return
      */
     Result lists(Integer userId);
+
+    /**
+     * 检查订单中是否有商品引用
+     * @param productId
+     * @return
+     */
+    Result check(Integer productId);
+
+    /**
+     * 后台管理查询全部订单数据方法
+     * @param pageRequest
+     * @return
+     */
+    Result adminList(PageRequest pageRequest);
 }

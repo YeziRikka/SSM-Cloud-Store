@@ -85,4 +85,19 @@ public class CollectServiceImpl implements CollectService {
         log.info("CollectServiceImpl.delete业务结束，结果:{}",rows);
         return Result.ok("删除成功");
     }
+
+    /**
+     * 根据商品id删除 （后台商品下架服务
+     *
+     * @param productId
+     * @return
+     */
+    @Override
+    public Result removeByPid(Integer productId) {
+        QueryWrapper<Collect> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("product_id", productId);
+        int rows = collectMapper.delete(queryWrapper);
+        log.info("CollectServiceImpl.removeByPid业务结束，结果:{}",rows);
+        return Result.ok("收藏商品删除成功");
+    }
 }

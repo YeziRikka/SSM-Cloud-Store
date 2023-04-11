@@ -50,5 +50,9 @@ public class CartController {
         return cartService.remove(cart);
     }
 
+    @PostMapping("/remove/check")
+    public Result removeCheck(@RequestBody Integer productId){
+        return  cartService.check(productId);
+    }
 
 }

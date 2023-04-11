@@ -3,10 +3,7 @@ package com.itWk.product.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.itWk.POJO.Product;
 import com.itWk.Utils.Result;
-import com.itWk.param.ProductHotRequest;
-import com.itWk.param.ProductIdRequest;
-import com.itWk.param.ProductIdsRequest;
-import com.itWk.param.ProductSearchRequest;
+import com.itWk.param.*;
 import com.itWk.to.OrderToProduct;
 
 import java.util.List;
@@ -90,4 +87,33 @@ public interface ProductService extends IService<Product>{
      * @param orderToProductList
      */
     void subNumber(List<OrderToProduct> orderToProductList);
+
+    /**
+     * 类别对应商品数量查询
+     * @param categoryId
+     * @return
+     */
+    Long adminCount(Integer categoryId);
+
+    /**
+     * 后端商品保存业务
+     * @param productSaveRequest
+     * @return
+     */
+    Result adminSave(ProductSaveRequest productSaveRequest);
+
+    /**
+     * 后端商品更新业务
+     * @param product
+     * @return
+     */
+    Result adminUpdate(Product product);
+
+    /**
+     *
+     * 商品删除业务
+     * @param productId
+     * @return
+     */
+    Result adminRemove(Integer productId);
 }

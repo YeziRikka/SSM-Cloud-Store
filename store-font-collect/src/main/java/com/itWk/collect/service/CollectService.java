@@ -20,8 +20,15 @@ public interface CollectService {
 
     /**
      * 根据用户id和商品id删除收藏数据
-     * @param userId
+     * @param collect
      * @return
      */
     Result remove(Collect collect);
+
+    /**
+     * 根据商品id删除 （后台商品下架服务
+     * @param productId
+     * @return
+     */
+    Result removeByPid(Integer productId);
 }

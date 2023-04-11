@@ -34,4 +34,9 @@ public class CollectController {
     public Result remove(@RequestBody Collect collect){
         return collectService.remove(collect);
     }
+
+    @PostMapping("/remove/product")
+    public Result removeByPid(@RequestBody Integer productId){
+        return collectService.removeByPid(productId);
+    }
 }

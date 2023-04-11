@@ -1,13 +1,19 @@
 package com.itWk.admin.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.itWk.Clients.CategoryClient;
+import com.itWk.POJO.Category;
+import com.itWk.Utils.Result;
 import lombok.extern.slf4j.Slf4j;
+import org.checkerframework.checker.units.qual.C;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
@@ -17,8 +23,9 @@ import java.util.List;
 @Controller
 @RequestMapping
 public class HtmlJumpController {
-//    @Autowired
-//    private CategoryClient categoryClient;
+
+    @Autowired
+    private CategoryClient categoryClient;
 
     /**
      *  设计欢迎页面跳转controller
@@ -126,8 +133,17 @@ public class HtmlJumpController {
         log.info("HtmlJumpController.productSaveHtml业务结束，结果:{}");
 
         //查询类别列表,存入共享域
-//        List<Category> list = categoryClient.list();
-//        model.addAttribute("clist",list);
+        Result result = categoryClient.list();
+        List<LinkedHashMap> data = (List<LinkedHashMap>) result.getData();
+        List<Category> categoryList = new ArrayList<>();
+        ObjectMapper objectMapper = new ObjectMapper();
+        for (LinkedHashMap hashMap : data) {
+            Category category = new Category();
+            category.setCategoryId((Integer) hashMap.get("category_id"));
+            category.setCategoryName((String) hashMap.get("category_name"));
+            categoryList.add(category);
+        }
+        model.addAttribute("clist",categoryList);
         return "product/add";
     }
 
@@ -140,8 +156,17 @@ public class HtmlJumpController {
         log.info("HtmlJumpController.productUpdateHtml业务结束，结果:{}");
 
         //查询类别列表,存入共享域
-//        List<Category> list = categoryClient.list();
-//        model.addAttribute("clist",list);
+        Result result = categoryClient.list();
+        List<LinkedHashMap> data = (List<LinkedHashMap>) result.getData();
+        List<Category> categoryList = new ArrayList<>();
+        ObjectMapper objectMapper = new ObjectMapper();
+        for (LinkedHashMap hashMap : data) {
+            Category category = new Category();
+            category.setCategoryId((Integer) hashMap.get("category_id"));
+            category.setCategoryName((String) hashMap.get("category_name"));
+            categoryList.add(category);
+        }
+        model.addAttribute("clist",categoryList);
         return "product/edit";
     }
 }

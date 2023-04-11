@@ -1,6 +1,8 @@
 package com.itWk.Clients;
 
+import com.itWk.POJO.Category;
 import com.itWk.Utils.Result;
+import com.itWk.param.PageRequest;
 import com.itWk.param.ProductHotRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,4 +26,16 @@ public interface CategoryClient {
 
     @GetMapping("category/list")
     Result list();
+
+    @PostMapping("/category/admin/list")
+    Result adminPageList(@RequestBody PageRequest pageRequest);
+
+    @PostMapping("/category/admin/save")
+    Result adminSave(@RequestBody Category category);
+
+    @PostMapping("/category/admin/remove")
+    Result adminRemove(@RequestBody Integer categoryId);
+
+    @PostMapping("/category/admin/update")
+    Result adminUpdate(@RequestBody Category category);
 }

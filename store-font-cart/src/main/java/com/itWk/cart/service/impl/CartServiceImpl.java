@@ -177,4 +177,21 @@ public class CartServiceImpl implements CartService {
         cartMapper.deleteBatchIds(cardIds);
         log.info("CartServiceImpl.clearIds业务结束",cardIds);
     }
+
+    /**
+     * 查询购物车项
+     *
+     * @param productId
+     * @return
+     */
+    @Override
+    public Result check(Integer productId) {
+        QueryWrapper<Cart> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("product_id", productId);
+        Long count = cartMapper.selectCount(queryWrapper);
+        if (count > 0){
+            return Result.fail("有：" + count + "件商品已存在，删除失败");
+        }
+        return Result.ok("购物车无商品");
+    }
 }
